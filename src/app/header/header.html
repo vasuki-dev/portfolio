@@ -1,0 +1,23 @@
+<nav [ngClass]="{scrollbar:isScrolled()}" class="navbar topbar navbar-expand-lg navbar-dark bg-dark px-4 py-1">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+        <!-- <span class="logo-icon me-2">M</span> -->
+        <img src="assets/images/mvlogo.png" height="40" width="40" />
+        <span class="logo-text">VASUKI</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav me-3">
+            <li class="nav-item"><a style="cursor: pointer !important;" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link" routerLink="">HOME</a></li>
+            <li class="nav-item"><a style="cursor: pointer !important;" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link" routerLink="/about">ABOUT</a></li>
+            <li class="nav-item"><a style="cursor: pointer !important;" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link" routerLink="/project">PROJECTS</a></li>
+            <li class="nav-item"><a style="cursor: pointer !important;" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link" routerLink="/resume">RESUME</a></li>
+        </ul>
+        <a class="btn btn-primary" routerLink="/contact">LET'S TALK</a>
+    </div>
+</nav>
