@@ -1,0 +1,1 @@
+import{Da as o,Qa as n,Ra as c,Xa as r}from"./chunk-WPXBDL66.js";var p=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-project"]],decls:2,vars:0,template:function(e,i){e&1&&(n(0,"p"),r(1,"project works!"),c())},encapsulation:2})};export{p as Project};
