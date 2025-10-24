@@ -10,14 +10,16 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav me-3">
             <li class="nav-item"><a style="cursor: pointer !important;" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link" routerLink="">HOME</a></li>
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link" routerLink="" (click)="closeNavbar()">HOME</a></li>
             <li class="nav-item"><a style="cursor: pointer !important;" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link" routerLink="/about">ABOUT</a></li>
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link" routerLink="/about" (click)="closeNavbar()">ABOUT</a></li>
             <li class="nav-item"><a style="cursor: pointer !important;" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link" routerLink="/project">PROJECTS</a></li>
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link" routerLink="/project" (click)="closeNavbar()">PROJECTS</a></li>
             <li class="nav-item"><a style="cursor: pointer !important;" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link" routerLink="/resume">RESUME</a></li>
+                    [routerLinkActiveOptions]="{ exact: true }" class="nav-link" routerLink="/resume" (click)="closeNavbar()">RESUME</a></li>
+            <li class="mt-1 mb-2 mb-lg-0 mt-lg-0 ">
+                <button class="btn button-3d"  routerLink="/contact" (click)="closeNavbar()">LET'S TALK</button>
+            </li>
         </ul>
-        <a class="btn btn-primary" routerLink="/contact">LET'S TALK</a>
     </div>
 </nav>

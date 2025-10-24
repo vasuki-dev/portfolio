@@ -1,0 +1,82 @@
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    //   background: linear-gradient(135deg, #101820, #1a1a1a);
+    color: #fff;
+    overflow: hidden;
+}
+@keyframes blink { 0%,50%,100%{opacity:1;} 25%,75%{opacity:0;} }
+
+.row {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-content {
+    padding: 0.5rem;
+}
+
+.name {
+    color: #00e0ff;
+    text-shadow: 0 0 10px rgba(0, 207, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+.typing-text {
+  color: #00e0ff;
+  font-weight: 600;
+  border-right: 3px solid #00e0ff;
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.hero-section {
+  height: 100vh;
+  background-color: #113e6c; /* Your chosen background */
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.right-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 80%;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* Button Style */
+.btn {
+    margin-top: 1.5rem;
+    background: #00bcd4;
+    border: none;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #06a9de;
+    transform: translateY(-2px);
+}

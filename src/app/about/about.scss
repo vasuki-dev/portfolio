@@ -1,0 +1,35 @@
+.section-heading h6 span {
+    background: #0d94f0c7;
+    border-radius: 4px;
+    padding: 5px 12px;
+    display: inline-block;
+    color: var(--px-white);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.name {
+    color: #62a7e7;
+    text-shadow: 0 0 10px rgba(0, 207, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+/* Button Style */
+.btn {
+    margin-top: 1.5rem;
+    background: #00bcd4;
+    border: none;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #06a9de;
+    transform: translateY(-2px);
+}
