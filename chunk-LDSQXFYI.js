@@ -1,1 +1,0 @@
-import{Da as s,Qa as m,Ra as n,Xa as o}from"./chunk-WPXBDL66.js";var a=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=s({type:t,selectors:[["app-resume"]],decls:2,vars:0,template:function(e,r){e&1&&(m(0,"p"),o(1,"resume works!"),n())},encapsulation:2})};export{a as Resume};
