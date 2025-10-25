@@ -1,18 +1,48 @@
 <div class="container py-5">
-  <h2 class="mb-4 text-center">Contact Me</h2>
-  <form>
-    <div class="mb-3">
-      <label class="form-label">Name</label>
-      <input type="text" class="form-control" placeholder="Your Name">
+  <h2 class="mb-4 text-center">Contact <span class="name">Me</span></h2>
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-1 col-md-4"></div>
+    <div class="col-10 col-md-4 mb-4">
+      <div class="card shadow-lg p-3 mb-2 bg-body-tertiary rounded h-100">
+        <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
+
+          <div class="mb-3">
+            <input type="text" formControlName="name" class="form-control" placeholder="Your Name"
+            [ngClass]="{'border-danger':formControls['name'].invalid && formControls['name'].touched}">
+            <span
+              *ngIf="formControls['name'].invalid && formControls['name'].touched && formControls['name'].hasError('required')">
+              <span class="text-danger mt-1">* Name is Required.</span>
+            </span>
+          </div>
+
+          <div class="mb-3">
+            <input type="email" formControlName="email" class="form-control" placeholder="Your Email"
+            [ngClass]="{'border-danger': formControls['email'].invalid && formControls['email'].touched}">
+            <span
+              *ngIf="formControls['email'].invalid && formControls['email'].touched && formControls['email'].hasError('required')">
+              <span class="text-danger mt-1">* Email is Required.</span>
+            </span>
+            <span
+              *ngIf="formControls['email'].invalid && formControls['email'].touched && formControls['email'].hasError('email')">
+              <span class="text-danger mt-1">* Invalid Email.</span>
+            </span>
+          </div>
+
+          <div class="mb-3">
+            <textarea formControlName="message" class="form-control" rows="5" placeholder="Your Message"
+            [ngClass]="{'border-danger':formControls['message'].invalid && formControls['message'].touched}"></textarea>
+            <span
+              *ngIf="formControls['message'].invalid && formControls['message'].touched && formControls['message'].hasError('required')">
+              <span class="text-danger mt-1">* Message is Required.</span>
+            </span>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-dark">Send Message</button>
+          </div>
+
+        </form>
+      </div>
     </div>
-    <div class="mb-3">
-      <label class="form-label">Email</label>
-      <input type="email" class="form-control" placeholder="Your Email">
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Message</label>
-      <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Send Message</button>
-  </form>
-</div>
+    <div class="col-1 col-md-4"></div>
+  </div>

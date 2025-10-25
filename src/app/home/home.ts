@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
@@ -15,6 +16,32 @@ export class Home implements AfterViewInit {
     'Full-Stack Developer',
     'Blogger'
   ];
+  nodes = [
+    { name: 'Angular', icon: 'assets/icons/angular.svg' },
+    { name: 'JavaScript', icon: 'assets/icons/javascript.svg' },
+    { name: 'Typescript', icon: 'assets/icons/typescript.svg' },
+    { name: 'NodeJS', icon: 'assets/icons/nodejs.svg' },
+    { name: 'SQL', icon: 'assets/icons/sql.svg' },
+  ];
+
+  radii = [140, 190, 250, 310, 370];
+  speeds = [14, 20, 26, 32, 38];
+
+  ngOnInit() { }
+
+  getOrbitStyle(i: number) {
+    const radius = 130 + i * 60;   // distance from center
+    const duration = 25 + i * 5;   // slower rotation for outer planets
+    const delay = i * 4;           // start at different times
+    const angle = i * (360 / this.nodes.length); // evenly spaced angle
+    return {
+      width: `${radius * 2}px`,
+      height: `${radius * 2}px`,
+      transform: `translate(-50%, -50%) rotate(${angle}deg)`,
+      animation: `rotate ${duration}s linear infinite`,
+      'animation-delay': `${delay}s`
+    };
+  }
   private typingElement!: HTMLElement;
   private text = '';
   private wordIndex = 0;

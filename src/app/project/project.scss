@@ -1,0 +1,38 @@
+.name {
+    color: #00e0ff;
+    text-shadow: 0 0 10px rgba(0, 207, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+/* Set card border color */
+.card {
+    // border: 2px solid #181919;
+     box-shadow: 0 0 10px rgba(0, 207, 255, 0.7) !important;
+    /* Bootstrap primary blue */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Change border color on hover */
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    // box-shadow: 0 0 10px rgba(0, 207, 255, 0.7) !important;
+    border-color: #0d6efd;
+    /* Optional: change border to green on hover */
+}
+
+/* Project title color */
+.card-title {
+    color: #181919;
+    /* Primary blue */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Optional: change title color on hover */
+.card:hover .card-title {
+    color: #0d6efd;
+    /* Change to green when hovered */
+}
+

@@ -1,7 +1,6 @@
-<div class="home-container">
+<!-- <div class="home-container">
     <div class="row align-items-center py-5">
-        <!-- Left Column -->
-        <div class="col-6 left-content">
+        <div class="col-md-6 left-content">
             <h2>Hey! I'm <span class="name">Vasuki</span></h2>
             <h3>
                 I'm a
@@ -13,10 +12,38 @@
                 Always exploring new frameworks and modern web trends.</p>
             <button class="btn" (click)="viewWork()">View My Work</button>
         </div>
-
-        <!-- Right Column -->
-        <div class="col-6 right-content">
+        <div class="col-md-6 right-content">
             <img src="assets/images/profile.jpg" alt="Vasuki" class="profile-img">
         </div>
     </div>
-</div>
+</div> -->
+
+<section class="container-fluid hero-section">
+    <div class="row align-items-center  ps-5 min-vh-100">
+        <div class="col-md-4 text-center text-md-start content">
+            <h2>Hey! I'm <span class="name">Vasuki</span></h2>
+            <h3>
+                I'm a
+                <span class="typing-text"></span>
+            </h3>
+            <p class="mb-0 pb-0">Full-stack developer with strong expertise in Angular, Node.js, and SQL. Building
+                fast,
+                scalable, and
+                maintainable applications with clean architecture.
+                Always exploring new frameworks and modern web trends.</p>
+            <button class="btn" (click)="viewWork()">View My Work</button>
+        </div>
+        <div class="col-md-8  text-center" style="padding-top: 6rem !important;">
+            <div class="orbit-system">
+                <img src="assets/images/profile.jpg" alt="Profile" class="sun-image" />
+
+                <div *ngFor="let node of nodes; let i = index" class="planet-orbit" [ngStyle]="getOrbitStyle(i)">
+                    <div class="orbit-ring"></div>
+                    <div class="planet" [title]="node.name">
+                        <img [src]="node.icon" alt="{{ node.name }}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
