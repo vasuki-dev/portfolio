@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       - name: Build Angular App
-        run: npm run build -- --base-href "github.com/vasuki-dev/portfolio"
+        run: npm run build -- --base-href /portfolio/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
