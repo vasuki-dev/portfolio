@@ -38,3 +38,12 @@
     /* Change to green when hovered */
 }
 
+.project-scroll{
+  display:flex;
+  gap:30px;
+  overflow-x:auto;
+  padding:40px;
+  scroll-snap-type:x mandatory;
+  justify-content:center;
+}
+
