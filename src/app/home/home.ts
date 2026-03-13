@@ -10,10 +10,11 @@ import { Router } from '@angular/router';
 })
 export class Home implements AfterViewInit {
   titles = [
+    'Full-Stack Developer',
     'Angular Developer',
     'Frontend Developer',
+    'Node.js Developer',
     'Backend Developer',
-    'Full-Stack Developer',
     'Blogger'
   ];
   nodes = [

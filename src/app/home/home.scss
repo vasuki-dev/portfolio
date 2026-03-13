@@ -148,3 +148,62 @@
         }
     }
 }
+
+//Today
+body {
+    overflow-x: hidden;
+}
+.hero-section {
+    overflow-x: hidden;
+}
+.orbit-wrapper{
+padding-top:40px;
+}
+
+.orbit-system {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 420px;
+    margin: auto;
+}
+
+@media (max-width:768px) {
+
+    .orbit-system {
+        max-width: 260px;
+        height: 260px;
+    }
+
+    .sun-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .planet {
+        width: 38px;
+        height: 38px;
+    }
+
+    .planet img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hero-section .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .content {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .orbit-wrapper{
+padding-top:20px;
+}
+}
+

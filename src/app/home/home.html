@@ -20,20 +20,21 @@
 
 <section class="container-fluid hero-section">
     <div class="row align-items-center  ps-5 min-vh-100">
-        <div class="col-md-4 text-center text-md-start content">
+        <div class="col-sm-12 col-md-4  text-md-start content gap-3">
             <h2>Hey! I'm <span class="name">Vasuki</span></h2>
             <h3>
                 I'm a
                 <span class="typing-text"></span>
             </h3>
-            <p class="mb-0 pb-0">Full-stack developer with strong expertise in Angular, Node.js, and SQL. Building
+            <p class="mb-0 pb-0">Full-stack developer with strong expertise in Angular(v16-v20), Node.js(v22), and SQL.
+                Building
                 fast,
                 scalable, and
                 maintainable applications with clean architecture.
                 Always exploring new frameworks and modern web trends.</p>
             <button class="btn" (click)="viewWork()">View My Work</button>
         </div>
-        <div class="col-md-8  text-center" style="padding-top: 6rem !important;">
+        <div class="col-sm-12 col-md-8 orbit-wrapper text-center">
             <div class="orbit-system">
                 <img src="assets/images/profile.jpg" alt="Profile" class="sun-image" />
 
@@ -45,5 +46,18 @@
                 </div>
             </div>
         </div>
+        <!-- <div class="col-12 col-md-8 text-center orbit-wrapper">
+
+           
+            <img src="assets/images/profile.jpg" alt="Profile" class="sun-image" />
+
+            <div class="skills-container">
+                <div *ngFor="let node of nodes" class="skill-item" [title]="node.name">
+                    <img [src]="node.icon" alt="{{ node.name }}" />
+                    <p>{{node.name}}</p>
+                </div>
+            </div>
+
+        </div> -->
     </div>
 </section>
