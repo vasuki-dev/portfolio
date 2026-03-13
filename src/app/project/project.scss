@@ -3,15 +3,17 @@
     text-shadow: 0 0 10px rgba(0, 207, 255, 0.7);
     transform: translateY(-2px);
 }
-
+.card-text{
+    color: black  !important;
+}
 /* Set card border color */
 .card {
     // border: 2px solid #181919;
      box-shadow: 0 0 10px rgba(0, 207, 255, 0.7) !important;
-    // /* Bootstrap primary blue */
+    /* Bootstrap primary blue */
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    // cursor: pointer;
+    cursor: pointer;
 }
 
 /* Change border color on hover */
