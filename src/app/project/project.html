@@ -2,22 +2,38 @@
   <h2 class="mb-3">My <span class="name">Projects</span></h2>
   <div class="row">
     <div class="project-scroll">
-      <div class="col-12 col-md-4" *ngFor="let project of projects">
-        <div class="col-12 col-md-10 shadow-lg p-3 mb-5 bg-body-tertiary rounded h-100">
-          <img [src]="project.image" class="card-img-top" alt="{{project.title}}">
-          <div class="card-body mt-1 d-flex flex-column">
+      <div class="col-12 col-md-4 project-card" *ngFor="let project of projects">
+        <div class="col-12 col-md-10 project-inner  shadow-lg p-3 bg-body-tertiary rounded">
+          <img [src]="project.image" class="card-img-top project-img" alt="{{project.title}}">
+          <div class="card-body card-content mt-1 d-flex flex-column">
             <h5 class="card-title mb-3">{{ project.title }}</h5>
-
             <ul class="card-text" style="text-align: left; padding-left: 20px;">
-              @for(line of project.descriptionLines; track $index; let i = $index){
-              @if(i === 0){
-              <li class="card-title">{{ line }}</li>
-              }
-              @else{
-              <li>{{ line }}</li>
-              }
-              }
+              @for(tech of project.descriptionLines; track tech; let i =$index){
+              @if(i < 1){<li>{{ tech }}</li>}
+                }
             </ul>
+            <button class="btn btn-primary mt-auto" (click)="openProject(project)">
+              View More
+            </button>
+            <div class="project-modal" *ngIf="selectedProject">
+
+              <div class="modal-content" (click)="$event.stopPropagation()">
+
+                <span class="close-btn" (click)="closeProject()">×</span>
+
+                <img [src]="selectedProject.image" class="modal-img">
+
+                <h3 class="card-title mb-3">{{selectedProject.title}}</h3>
+
+                <ul class="card-text" style="text-align: left; padding-left: 20px;">
+                  @for(line of selectedProject.descriptionLines; track line){
+                  <li>{{ line }}</li>
+                  }
+                </ul>
+
+              </div>
+
+            </div>
           </div>
         </div>
       </div>

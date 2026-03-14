@@ -2,18 +2,17 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-project',
+  selector: 'app-project-list',
   imports: [CommonModule],
-  templateUrl: './project.html',
-  styleUrl: './project.scss'
+  templateUrl: './project-list.html',
+  styleUrl: './project-list.scss'
 })
-export class Project {
-  projects = [
+export class ProjectList {
+ projects = [
     {
       title: 'Payroll Management System - Production Application',
       descriptionLines: [
         'Tech: Angular (v14 → v20), Node.js(v22), Nginx, Reverse Proxy, Upstream, REST APIs, SQL Server',
-        'Tools: GitLab, GitHub, Postman, VS Code',
         'Migrated the frontend application from Angular 14 to Angular 20, improving performance and adopting modern Angular features.',
         'Refactored legacy components and ensured compatibility with the latest Angular architecture.',
         'Implemented Nginx Reverse Proxy and Upstream configuration for production deployment.',
@@ -26,8 +25,7 @@ export class Project {
     {
       title: 'HRIS (SaaS) Application - In Development',
       descriptionLines: [
-        'Tech: Angular (v17 → v19), Node.js (v20), Express.js, REST APIs, SQL Server, PrimeNG',
-        'Tools: GitLab, GitHub, Postman, VS Code',
+        'Tech: Angular (v17 → v19), Node.js, PrimeNG, Express.js, SQL Server',
         'Developed core modules including Organization Management, Employee Management, Attendance Management, and Exit Management.',
         'Built reusable UI components and implemented RESTful APIs.',
         'Designed scalable frontend architecture using modern Angular practices.',
@@ -40,8 +38,7 @@ export class Project {
     {
       title: 'Task Management App',
       descriptionLines: [
-        'Tech: Angular v(20), Node.js (v20), Express.js, REST APIs, Nginx, Reverse Proxy, MySQL Server',
-        'Tools: GitLab, GitHub, Postman, VS Code',
+        'Tech: Angular v(20), Node.js, Express.js, MySQL Server',
         'Web application to create, assign, and track tasks.',
         'Supports multiple roles: employees and managers.',
         'Tasks have status workflow: New → In Progress → Done → Approved.',
@@ -55,7 +52,6 @@ export class Project {
       title: 'Bus Ticket Booking',
       descriptionLines: [
         'Tech: Angular v(14), Node.js, Express.js, Firebase',
-        'Tools: GitLab, GitHub, Postman, VS Code',
         'Allows users to search, book, and cancel bus tickets online.',
         'Shows real-time seat availability and pricing.',
         'Users can view booking history and receive email confirmations.',
@@ -69,7 +65,6 @@ export class Project {
       title: 'Hospital Appointment Booking',
       descriptionLines: [
         'Tech: Angular v(14), Node.js, Express.js, Firebase',
-        'Tools: GitLab, GitHub, Postman, VS Code',
         'Patients can book appointments with doctors online.',
         'Supports appointment scheduling, rescheduling, and cancellations.',
         'Admin dashboard manages doctors, availability, and patient records.',
@@ -80,14 +75,14 @@ export class Project {
       link: '#'
     }
   ];
-  selectedProject: any = null;
+selectedProject:any = null;
 
-  openProject(project: any) {
-    this.selectedProject = project;
-    console.log(this.selectedProject, '--------------> selected project');
-  }
+openProject(project:any){
+  this.selectedProject = project;
+  console.log(this.selectedProject,'--------------> selected project');
+}
 
-  closeProject() {
-    this.selectedProject = null;
-  }
+closeProject(){
+  this.selectedProject = null;
+}
 }

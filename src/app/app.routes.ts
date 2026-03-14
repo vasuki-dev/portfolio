@@ -12,6 +12,7 @@ export const routes: Routes = [
     },
     {
         path:'project',loadComponent:()=>import('../app/project/project').then(mod=>mod.Project)
+        // path:'project',loadComponent:()=>import('../app/project-list/project-list').then(mod=>mod.ProjectList)
     },
     {
         path:'resume',loadComponent:()=>import('../app/resume/resume').then(mod=>mod.Resume)
