@@ -1,42 +1,71 @@
 <div class="container py-2 text-center">
   <h2 class="mb-3">My <span class="name">Projects</span></h2>
+
   <div class="row">
     <div class="project-scroll">
+
       <div class="col-12 col-md-4 project-card" *ngFor="let project of projects">
-        <div class="col-12 col-md-10 project-inner  shadow-lg p-3 bg-body-tertiary rounded">
-          <img [src]="project.image" class="card-img-top project-img" alt="{{project.title}}">
+
+        <div class="col-12 col-md-10 project-inner shadow-lg p-3 bg-body-tertiary rounded">
+
+          <img [src]="project.image" class="card-img-top project-img" [alt]="project.title">
+
           <div class="card-body card-content mt-1 d-flex flex-column">
-            <h5 class="card-title mb-3">{{ project.title }}</h5>
-            <ul class="card-text" style="text-align: left; padding-left: 20px;">
-              @for(tech of project.descriptionLines; track tech; let i =$index){
-              @if(i < 1){<li>{{ tech }}</li>}
+
+            <h5 class="card-title mb-1">
+              {{ project.title }}
+            </h5>
+
+            <ul class="card-text text-start">
+              @for (tech of project.descriptionLines; track tech; let i = $index) {
+              @if (i < 1) { <li>{{ tech }}</li>
+                }
                 }
             </ul>
+
+
+
+            @if (project.link) {
+            <a [href]="project.link" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary mb-2">
+              View Live Demo ↗
+            </a>
+            }
             <button class="btn btn-primary mt-auto" (click)="openProject(project)">
               View More
             </button>
-            <div class="project-modal" *ngIf="selectedProject">
 
-              <div class="modal-content" (click)="$event.stopPropagation()">
-
-                <span class="close-btn" (click)="closeProject()">×</span>
-
-                <img [src]="selectedProject.image" class="modal-img">
-
-                <h3 class="card-title mb-3">{{selectedProject.title}}</h3>
-
-                <ul class="card-text" style="text-align: left; padding-left: 20px;">
-                  @for(line of selectedProject.descriptionLines; track line){
-                  <li>{{ line }}</li>
-                  }
-                </ul>
-
-              </div>
-
-            </div>
           </div>
         </div>
       </div>
+
+    </div>
+  </div>
+
+  <!-- Project Details Modal -->
+  <div class="project-modal" *ngIf="selectedProject" (click)="closeProject()">
+
+    <div class="modal-content" (click)="$event.stopPropagation()">
+
+      <span class="close-btn" (click)="closeProject()">×</span>
+
+      <img [src]="selectedProject.image" class="modal-img" [alt]="selectedProject.title">
+
+      <h3 class="card-title mb-3">
+        {{ selectedProject.title }}
+      </h3>
+
+      <ul class="card-text text-start">
+        @for (line of selectedProject.descriptionLines; track line) {
+        <li>{{ line }}</li>
+        }
+      </ul>
+
+      @if (selectedProject.link) {
+      <a [href]="selectedProject.link" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-3">
+        Click Here to View Live Project ↗
+      </a>
+      }
+
     </div>
   </div>
 </div>
